@@ -27,7 +27,7 @@ source("appFiles/packageLoad.R")
 source("appFiles/dataLoad.R")
 source("appFiles/CSS.R", local = TRUE)
 source("appFiles/dashboardPage.R", local = TRUE)
-##### User interface #####
+##### User interface ##### ----
 ui <- tagList( # dependencies
   use_waiter(),
   useSweetAlert(),
@@ -135,7 +135,7 @@ ui <- tagList( # dependencies
   )
   )
 
-##### server #####
+##### server ##### ----
 server <- function(input, output, session) {
   printLogJs = function(x, ...) {
     logjs(x)
