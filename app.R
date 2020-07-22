@@ -1,3 +1,4 @@
+# COVID 19 dataviz ----
 ##### Global: options #####
 Production = T 
 options(scipen = 1000, expressions = 10000)
@@ -27,7 +28,7 @@ source("appFiles/packageLoad.R")
 source("appFiles/dataLoad.R")
 source("appFiles/CSS.R", local = TRUE)
 source("appFiles/dashboardPage.R", local = TRUE)
-##### User interface ##### ----
+##### UI ##### ----
 ui <- tagList( # dependencies
   use_waiter(),
   useSweetAlert(),
@@ -38,7 +39,7 @@ ui <- tagList( # dependencies
   ##### CSS and style functions #####
   CSS, #CSS.R
   # Loading message
-  argonDash::argonDashPage(
+    argonDash::argonDashPage(
     title = appLongName,
     header = argonDash::argonDashHeader(
       gradient = T,
